@@ -1,0 +1,282 @@
+:root {
+    font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+    color: #202939;
+    background: #f4f6fa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.container {
+    width: min(960px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 24px;
+}
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: #5267c7;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: clamp(30px, 5vw, 42px);
+    letter-spacing: -1px;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.page-header p,
+.muted,
+.hint {
+    color: #687386;
+}
+
+.panel {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e2e7ef;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgb(31 41 55 / 4%);
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 32px 20px;
+    text-align: center;
+    border: 2px dashed #cbd4e5;
+    border-radius: 14px;
+    background: #fafbff;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.upload-box:hover,
+.upload-box.dragover {
+    border-color: #5267c7;
+    background: #f0f3ff;
+}
+
+.upload-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #e9edff;
+    color: #5267c7;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.upload-box strong {
+    font-size: 17px;
+}
+
+.hint {
+    margin: 2px 0 0;
+    font-size: 12px;
+}
+
+.button {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button-primary {
+    width: 100%;
+    margin-top: 20px;
+    color: #ffffff;
+    background: #5267c7;
+}
+
+.button-secondary {
+    color: #3548a1;
+    background: #e9edff;
+}
+
+.file-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.file-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #e2e7ef;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.file-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.remove-file {
+    flex-shrink: 0;
+    padding: 7px 10px;
+    color: #a12b36;
+    background: #fff0f1;
+}
+
+.results-section {
+    margin-top: 32px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.empty-state {
+    padding: 28px;
+    color: #687386;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #cbd4e5;
+    border-radius: 12px;
+}
+
+.result-list {
+    display: grid;
+    gap: 14px;
+}
+
+.result-card {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e7ef;
+    border-radius: 14px;
+}
+
+.result-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.result-title {
+    overflow-wrap: anywhere;
+}
+
+.status {
+    flex-shrink: 0;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-success {
+    color: #126943;
+    background: #e4f7ed;
+}
+
+.status-warning {
+    color: #895b08;
+    background: #fff3d3;
+}
+
+.status-error {
+    color: #a12b36;
+    background: #fff0f1;
+}
+
+.result-card pre {
+    max-height: 440px;
+    overflow: auto;
+    margin: 0;
+    padding: 16px;
+    color: #dce6f5;
+    background: #182235;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.page-footer {
+    margin-top: 32px;
+    color: #7b8494;
+    text-align: center;
+    font-size: 12px;
+}
+
+.page-footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-top: 28px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .result-card-header {
+        flex-direction: column;
+    }
+}
