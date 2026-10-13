@@ -1,0 +1,9 @@
+@'
+.git
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.log
+'@ | Set-Content -Path ".dockerignore" -Encoding ascii
