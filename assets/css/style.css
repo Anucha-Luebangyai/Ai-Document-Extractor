@@ -280,3 +280,28 @@ p {
         flex-direction: column;
     }
 }
+
+.notice-panel {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border: 1px solid #e5c98b;
+    border-radius: 12px;
+    background: #fffaf0;
+    color: #6b5428;
+}
+
+.notice-title {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.notice-panel p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.notice-panel p + p {
+    margin-top: 8px;
+}
